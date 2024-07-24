@@ -63,23 +63,30 @@ export default function TableDisplay() {
               </tr>
             </thead>
             <tbody>
-              {jsonData[key].map((row, index) => (
-                <tr key={`table_${key}_row_${index}`}>
-                  <>
-                    <td className={"border-2 text-center border-black"}>
-                      {row["S.No"]}
-                    </td>
-                    <td className={"border-2 text-center border-black"}>
-                      {row["Date"]}
-                    </td>
-                    <td className={"border-2 text-center border-black text-blue-500 text-md m-0 p-0"}>
-                      <a href={row["Powerpoint Lecture"]}>
-                        {row["Topics Covered"]}
-                      </a>
-                    </td>
-                  </>
-                </tr>
-              ))}
+              {jsonData[key]
+                .slice()
+                .reverse()
+                .map((row, index) => (
+                  <tr key={`table_${key}_row_${index}`}>
+                    <>
+                      <td className={"border-2 text-center border-black"}>
+                        {index + 1}
+                      </td>
+                      <td className={"border-2 text-center border-black"}>
+                        {row["Date"]}
+                      </td>
+                      <td
+                        className={
+                          "border-2 text-center border-black text-blue-500 text-md m-0 p-0"
+                        }
+                      >
+                        <a href={row["Powerpoint Lecture"]}>
+                          {row["Topics Covered"]}
+                        </a>
+                      </td>
+                    </>
+                  </tr>
+                ))}
             </tbody>
           </table>
         </div>
