@@ -39,7 +39,7 @@ export default function TableDisplay() {
     <div className="m-2">
       <div className="flex justify-center gap-3">
         <button
-          className="btn border-1 border-black"
+          className="btn border-1 border-black hide-when-printing"
           onClick={() => setJsonData(null)}
         >
           Clear
@@ -72,7 +72,7 @@ export default function TableDisplay() {
                     <td className={"border-2 text-center border-black"}>
                       {row["Date"]}
                     </td>
-                    <td className={"border-2 text-center border-black"}>
+                    <td className={"border-2 text-center border-black text-blue-500 text-md m-0 p-0"}>
                       <a href={row["Powerpoint Lecture"]}>
                         {row["Topics Covered"]}
                       </a>
