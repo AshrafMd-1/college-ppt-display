@@ -57,8 +57,12 @@ export default function TableDisplay() {
                 <th className={"border-2 text-center text-lg border-black"}>
                   Date
                 </th>
+
                 <th className={"border-2 text-center text-lg border-black"}>
-                  Powerpoint Lecture
+                  Topics Covered
+                </th>
+                <th className={"border-2 text-center text-lg border-black"}>
+                  Powerpoint Lecture Link
                 </th>
               </tr>
             </thead>
@@ -75,14 +79,23 @@ export default function TableDisplay() {
                       <td className={"border-2 text-center border-black"}>
                         {row["Date"]}
                       </td>
+                      <td className={"border-2 text-center border-black"}>
+                        {row["Topics Covered"]}
+                      </td>
                       <td
-                        className={
-                          "border-2 text-center border-black text-blue-500 text-md m-0 p-0"
-                        }
+                        className={`border-2 text-center border-black ${row["Powerpoint Lecture"] !== "PDF" && "text-blue-500 text-md m-0 p-0"}`}
                       >
-                        <a href={row["Powerpoint Lecture"]}>
-                          {row["Topics Covered"]}
-                        </a>
+                        {row["Powerpoint Lecture"] === "PDF" ? (
+                          "Not Available"
+                        ) : (
+                          <a
+                            href={row["Powerpoint Lecture"]}
+                            target="_blank"
+                            rel="noreferrer"
+                          >
+                            {row["Powerpoint Lecture"]}
+                          </a>
+                        )}
                       </td>
                     </>
                   </tr>
