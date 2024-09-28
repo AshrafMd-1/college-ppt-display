@@ -6,4 +6,3 @@ Displays all the subject PPT links in a beautified manner
 
 > Need to have the ppt.json
 
-https://college-ppt-display.netlify.app/
