@@ -1,6 +1,6 @@
 # College PPT Links
 
-Displays all the subject PPT links in a beautified manner 
+Displays all the subject PPT links JSON in a beautiful manner 
 
 > Only for IARE students
 
