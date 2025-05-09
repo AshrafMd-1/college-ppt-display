@@ -1,9 +1,8 @@
 # College PPT Links
 
-Displays all the subject PPT links JSON in a beautiful manner 
+> 📦 **Archived** — This project was built for academic purposes during the college term. It is no longer in active use and is retained for reference only.
 
-> Only for IARE students
+A simple React-based website that displays subject PPT links from a `ppt.json` file in a clean, tabular format.  
 
-> Need to have the ppt.json
 
-https://collegeppt.netlify.app/
+
